@@ -1,1 +1,5 @@
-export type ApiReturnType = { itens: [ { [y:string]: string | number | boolean }] };
+export type ApiReturnType = {
+  items: [ {
+    [y:string]: string | number | boolean | object
+  }],
+};

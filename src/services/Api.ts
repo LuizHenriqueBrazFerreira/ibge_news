@@ -1,4 +1,4 @@
-import { URL } from '../Tests/utils/constants';
+import { URL } from '../utils/constants';
 import { ApiReturnType } from '../types';
 
 const buildURL = (search = '', filter = '') => {
@@ -19,7 +19,7 @@ export const fetchIGBE = async (search?:string, filter?:string) => {
   try {
     const response = await fetch(url);
     const data = await response.json() as ApiReturnType;
-    return data;
+    return data.items;
   } catch (error) {
     console.log(error);
     throw error;
