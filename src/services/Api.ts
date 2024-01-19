@@ -1,5 +1,5 @@
 import { URL } from '../utils/constants';
-import { ApiReturnType } from '../types';
+import { NewsType } from '../types';
 
 const buildURL = (search = '', filter = '') => {
   switch (filter) {
@@ -14,12 +14,12 @@ const buildURL = (search = '', filter = '') => {
   }
 };
 
-export const fetchIGBE = async (search?:string, filter?:string) => {
+export const fetchIGBE = async (filter?:string, search?:string) => {
   const url = buildURL(search, filter);
   try {
     const response = await fetch(url);
-    const data = await response.json() as ApiReturnType;
-    return data.items;
+    const data = await response.json();
+    return data.items as NewsType[];
   } catch (error) {
     console.log(error);
     throw error;
