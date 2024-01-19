@@ -7,6 +7,7 @@
     "dev": "vite --open",
     "build": "tsc && vite build",
     "lint": "eslint -c .eslintrc.json . --ext .js,.jsx,.ts,.tsx",
+    "lint:styles": "npx stylelint '**/*.css'",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -29,6 +30,8 @@
     "@vitest/coverage-v8": "^1.2.0",
     "eslint": "^8.55.0",
     "jsdom": "^23.2.0",
+    "stylelint": "^14.0.0",
+    "stylelint-order": "^5.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.2.0"
