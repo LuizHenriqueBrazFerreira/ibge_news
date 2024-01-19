@@ -29,9 +29,11 @@ function MainPage() {
       <PrincipalNews />
       <NavBar />
       <Search />
-      {api.slice(2, limit).map((news) => (
-        <NewsCard news={ news } key={ news.id } />
-      ))}
+      <section>
+        {api.slice(2, limit).map((news) => (
+          <NewsCard news={ news } key={ news.id } />
+        ))}
+      </section>
       <MoreNews />
     </>
   );

@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import fullHeart from '../public/checked_heart.png';
-import emptyHeart from '../public/empty_heart.png';
-import { NewsType } from '../types';
-import MainContext from '../context/main';
+import fullHeart from '../../public/checked_heart.png';
+import emptyHeart from '../../public/empty_heart.png';
+import { NewsType } from '../../types';
+import MainContext from '../../context/main';
+import { calculateDays } from '../../utils/calculateDays';
 
 function NewsCard({ news }: { news: NewsType }) {
   const { favorite, changeFavorite } = useContext(MainContext);
@@ -12,6 +13,8 @@ function NewsCard({ news }: { news: NewsType }) {
 
   const { introducao, titulo, link } = news;
   const { data_publicacao: dataPublicacao } = news;
+
+  const daysCount = calculateDays(dataPublicacao);
 
   const handleclick = () => {
     setFavorites(!favorites);
@@ -22,7 +25,9 @@ function NewsCard({ news }: { news: NewsType }) {
     <div>
       <h3>{titulo}</h3>
       <h5>{introducao}</h5>
-      <h6>{dataPublicacao}</h6>
+      {(daysCount === 0) && <h6>Publicado hoje</h6> }
+      {(daysCount === 1) && <h6>{`${daysCount} dia atrás`}</h6>}
+      {(daysCount > 1) && <h6>{`${daysCount} dias atrás`}</h6>}
       <Link to={ link }>Leia a notícia na íntegra</Link>
       <button onClick={ handleclick }>
         <img

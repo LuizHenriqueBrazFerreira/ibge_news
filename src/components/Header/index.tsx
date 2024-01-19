@@ -1,4 +1,4 @@
-import TrybeLogo from '../public/trybe-logo.webp';
+import TrybeLogo from '../../public/trybe-logo.webp';
 
 function Header() {
   return (

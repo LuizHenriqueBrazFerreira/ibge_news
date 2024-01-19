@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import MainContext from '../context/main';
+import MainContext from '../../context/main';
 
 function MoreNews() {
   const { changeLimit } = useContext(MainContext);

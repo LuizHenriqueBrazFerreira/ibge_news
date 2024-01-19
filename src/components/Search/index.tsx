@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import MainContext from '../context/main';
-import { fetchIGBE } from '../services/Api';
+import MainContext from '../../context/main';
+import { fetchIGBE } from '../../services/Api';
 
 function Search() {
   const { form, changeForm, changeApi } = useContext(MainContext);
