@@ -13,10 +13,11 @@ function MainPage() {
 
   useEffect(() => {
     const getApi = async () => {
-      changeLimit('reset');
       const data = await fetchIGBE();
       getApiFull(data);
       changeApi(data);
+      changeLimit('reset');
+      console.log(limit);
     };
     getApi();
   }, []);

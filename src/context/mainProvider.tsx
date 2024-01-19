@@ -7,14 +7,15 @@ function MainProvider({ children }: { children: React.ReactNode }) {
   const [limit, setLimit] = useState(11);
   const [form, setForm] = useState<SearchType>({} as SearchType);
   const [api, setApi] = useState<NewsType[]>([]);
+  const [favorite, setFavorite] = useState<NewsType[]>([]);
 
   const getApiFull = (data:NewsType[]) => {
     setApiFull(data);
   };
 
   const changeLimit = (reset?:string) => {
-    if (typeof reset === 'string') setLimit(11);
-    setLimit((prevState) => prevState + 9);
+    if (reset === 'reset') setLimit(11);
+    else setLimit((prevState) => prevState + 9);
   };
 
   const changeForm = (data:SearchType) => {
@@ -23,6 +24,13 @@ function MainProvider({ children }: { children: React.ReactNode }) {
 
   const changeApi = (data:NewsType[]) => {
     setApi(data);
+  };
+
+  const changeFavorite = (data:NewsType, isDelete = false) => {
+    const newFavorites = isDelete
+      ? favorite.filter((news) => news.id !== data.id)
+      : [...favorite, data];
+    setFavorite(newFavorites);
   };
 
   return (
@@ -36,6 +44,8 @@ function MainProvider({ children }: { children: React.ReactNode }) {
         changeForm,
         api,
         changeApi,
+        favorite,
+        changeFavorite,
       } }
     >
       {children}

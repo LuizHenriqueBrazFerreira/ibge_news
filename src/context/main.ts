@@ -9,7 +9,9 @@ type MainContextType = {
   form: SearchType,
   changeForm: (data:SearchType) => void,
   api: NewsType[],
-  changeApi: (data:NewsType[]) => void
+  changeApi: (data:NewsType[]) => void,
+  favorite:NewsType[],
+  changeFavorite: (data:NewsType, isDelete:boolean) => void
 };
 
 const MainContext = createContext<MainContextType>({} as MainContextType);

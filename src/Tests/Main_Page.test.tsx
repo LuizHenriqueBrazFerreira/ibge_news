@@ -42,7 +42,7 @@ describe('Analisa a funcionalidade da Main Page', async () => {
 
     const { pathname } = window.location;
 
-    expect(pathname).toBe('/main_page');
+    expect(pathname).toBe('/');
   });
 
   test('Verifica se ao clicar no botão "Mais notícias" é carregado mais 9 notícias na Main Page', async () => {
@@ -78,7 +78,7 @@ describe('Analisa a funcionalidade da Main Page', async () => {
 
     const { pathname } = window.location;
 
-    expect(pathname).toBe('/releases');
+    expect(pathname).toBe('/release');
   });
 
   test('Verifica se ao clicar no botão "Notícias" a url é devidamente alterada', async () => {
@@ -92,6 +92,6 @@ describe('Analisa a funcionalidade da Main Page', async () => {
 
     const { pathname } = window.location;
 
-    expect(pathname).toBe('/news');
+    expect(pathname).toBe('/noticia');
   });
 });
