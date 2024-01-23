@@ -19,6 +19,7 @@
 
 .header-container h1 {
   align-items: center;
+  background-color: rgba(14, 14, 14, 0);
   color: white;
   display: flex;
   font-size: 60px;
@@ -26,6 +27,6 @@
   font-weight: 400;
   left: 350px;
   letter-spacing: 1.6px;
-  line-height: 15px; /* 17.442% */
+  line-height: 15px;
   position: relative;
 }

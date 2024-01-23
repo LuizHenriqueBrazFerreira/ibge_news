@@ -7,6 +7,7 @@ import PrincipalNews from '../components/PrincipalNews';
 import MoreNews from '../components/MoreNews';
 import NavBar from '../components/NavBar';
 import Search from '../components/Search';
+import './index.css';
 
 function MainPage() {
   const { getApiFull, limit, changeLimit, api, changeApi } = useContext(MainContext);

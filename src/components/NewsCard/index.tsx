@@ -5,6 +5,7 @@ import emptyHeart from '../../public/empty_heart.png';
 import { NewsType } from '../../types';
 import MainContext from '../../context/main';
 import { calculateDays } from '../../utils/calculateDays';
+import './index.css';
 
 function NewsCard({ news }: { news: NewsType }) {
   const { favorite, changeFavorite } = useContext(MainContext);
@@ -22,18 +23,19 @@ function NewsCard({ news }: { news: NewsType }) {
   };
 
   return (
-    <div>
-      <h3>{titulo}</h3>
-      <h5>{introducao}</h5>
+    <div className="news-container">
+      <h3 className="title-principal">{titulo}</h3>
+      <h5 className="introduction">{introducao}</h5>
       {(daysCount === 0) && <h6>Publicado hoje</h6> }
       {(daysCount === 1) && <h6>{`${daysCount} dia atrás`}</h6>}
       {(daysCount > 1) && <h6>{`${daysCount} dias atrás`}</h6>}
-      <Link to={ link }>Leia a notícia na íntegra</Link>
+      <Link to={ link } id="full-news">Leia a notícia na íntegra</Link>
       <button onClick={ handleclick }>
         <img
           src={ favorite.some((data) => data.id === news.id)
             ? fullHeart : emptyHeart }
           alt="Favorite"
+          id="favorite-btn"
         />
       </button>
     </div>

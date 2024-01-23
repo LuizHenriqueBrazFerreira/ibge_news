@@ -6,6 +6,7 @@ import PrincipalNews from '../components/PrincipalNews';
 import NavBar from '../components/NavBar';
 import NewsCard from '../components/NewsCard';
 import MoreNews from '../components/MoreNews';
+import './index.css';
 
 function NewsPage() {
   const { getApiFull, limit, changeLimit, api, changeApi } = useContext(MainContext);
@@ -26,9 +27,11 @@ function NewsPage() {
       <Header />
       <PrincipalNews />
       <NavBar />
-      {api.slice(2, limit).map((news) => (
-        <NewsCard news={ news } key={ news.id } />
-      ))}
+      <section>
+        {api.slice(2, limit).map((news) => (
+          <NewsCard news={ news } key={ news.id } />
+        ))}
+      </section>
       <MoreNews />
     </>
   );
