@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import MainContext from '../../context/main';
+import './index.css';
 
 function MoreNews() {
   const { changeLimit } = useContext(MainContext);
@@ -9,7 +10,7 @@ function MoreNews() {
   };
 
   return (
-    <button onClick={ handleClick }>More News</button>
+    <button onClick={ handleClick } id="more-btn">Mais notícias</button>
   );
 }
 
