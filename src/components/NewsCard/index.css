@@ -4,7 +4,8 @@
   flex-direction: column;
   left: 60px;
   top: 30px;
-  width: 600px;
+  width: 550px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
 }
 

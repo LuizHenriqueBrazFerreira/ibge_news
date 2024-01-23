@@ -1,13 +1,20 @@
 import { NavLink } from 'react-router-dom';
+import './index.css';
 
 function NavBar() {
   return (
-    <>
-      <NavLink to="/" data-testid="main_page-btn">Mais recentes</NavLink>
-      <NavLink to="/release" data-testid="release-btn">Release</NavLink>
-      <NavLink to="/noticia" data-testid="news-btn">Notícia</NavLink>
-      <NavLink to="/favorites" data-testid="favorite-btn">Favoritas</NavLink>
-    </>
+    <div className="navbar-container">
+      <NavLink to="/" data-testid="main_page-btn" className="link">Mais recentes</NavLink>
+      <NavLink to="/release" data-testid="release-btn" className="link">Release</NavLink>
+      <NavLink to="/noticia" data-testid="news-btn" className="link">Notícia</NavLink>
+      <NavLink
+        to="/favorites"
+        data-testid="favorite-btn"
+        className="link"
+      >
+        Favoritas
+      </NavLink>
+    </div>
   );
 }
 
