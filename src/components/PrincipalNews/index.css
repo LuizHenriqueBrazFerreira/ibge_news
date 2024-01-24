@@ -67,9 +67,36 @@
 .title-principal {
   text-align: justify;
   margin: 10px 0 10px 0;
+  font-size: 22px;
 }
 
 .introduction {
   text-align: justify;
   margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) and (min-width: 460px) {
+  #principal-container {
+    width: 768px;
+    display: flex;
+  }
+  .image-news {
+    width: 380px;
+    height: 260px;
+    left: 8px;
+  }
+  .news-info {
+    left: 15px;
+  }
+  .title-principal {
+    width: 350px;
+  }
+  .introduction {
+    width: 350px;
+  }
+  #favorite-btn {
+    width: 30px
+  }
 }

@@ -24,8 +24,8 @@ function NewsCard({ news }: { news: NewsType }) {
 
   return (
     <div className="news-container">
-      <h3 className="title-principal">{titulo}</h3>
-      <h5 className="introduction">{introducao}</h5>
+      <h3 className="title-card">{titulo}</h3>
+      <h5 className="introduction-card">{introducao}</h5>
       {(daysCount === 0) && <h6>Publicado hoje</h6> }
       {(daysCount === 1) && <h6>{`${daysCount} dia atrás`}</h6>}
       {(daysCount > 1) && <h6>{`${daysCount} dias atrás`}</h6>}
