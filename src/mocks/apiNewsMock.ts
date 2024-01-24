@@ -1,15 +1,16 @@
-export const apiNewsMock = [
+export const apiNewsMock = { items: [
   {
-    id: 38927,
+    id: 38962,
     tipo: 'Notícia',
-    titulo: 'IBGE oferece 895 vagas no Concurso Público Nacional Unificado',
-    introducao: 'O IBGE participa do CPNU com 895 vagas destinadas a variados perfis...',
+    titulo: 'Favelas e Comunidades Urbanas:...',
+    introducao: 'A designação “Aglomerados Subnormais”...',
+    data_publicacao: '23/01/2024 10:00:00',
     editorias: 'ibge',
-    imagens: {
-      image_intro:
-      'images/agenciadenoticias/ibge/2024_01/CPNU_THUMB_Jos-Fernando-Ogura-SMCS.jpg',
-    },
-    link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38927-ibge-oferece-895-vagas-no-concurso-publico-nacional-unificado.html',
+    imagens:
+    '{"image_intro":"images\\/agenciadenoticias\\/ibge\\/2024_01\\/Favela_THUMB.jpg"}',
+    produtos_relacionados: '18354',
+    destaque: true,
+    link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38962-favelas-e-comunidades-urbanas-ibge-muda-denominacao-dos-aglomerados-subnormais.html',
   },
   {
     id: 38916,
@@ -154,4 +155,4 @@ export const apiNewsMock = [
     editorias: 'censo2020',
     link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38800-ibge-divulgara-dados-do-censo-demografico-2022-coordenadas-dos-enderecos-em-2-de-fevereiro-no-tocantins.html',
   },
-];
+] };

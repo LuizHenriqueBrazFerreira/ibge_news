@@ -1,14 +1,12 @@
-export const apiReleaseMock = [
+export const apiReleaseMock = { items: [
   {
-    id: 38915,
+    id: 38929,
     tipo: 'Release',
-    titulo: 'Volume dos Serviços varia 0,4% em novembro',
-    introducao: 'Em novembro de 2023, o volume de serviços no Brasil...',
-    editorias: 'economicas',
-    imagens: {
-      image_intro: 'images/agenciadenoticias/releases/PMS_Release.png',
-    },
-    link: 'http://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/38915-volume-dos-servicos-varia-0-4-em-novembro.html',
+    titulo: 'Em novembro, vendas no varejo variam 0,1%',
+    introducao: 'Em novembro de 2023, o volume de vendas...',
+    data_publicacao: '17/01/2024 09:00:00',
+    imagens: '{"image_intro":"images\\/agenciadenoticias\\/releases\\/PMC_release.png"}',
+    link: 'http://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/38929-vendas-no-varejo-variam-0-1.html',
   },
   {
     id: 38897,
@@ -154,4 +152,4 @@ export const apiReleaseMock = [
     editorias: 'economicas',
     link: 'http://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/38498-producao-industrial-varia-0-1-em-outubro.html',
   },
-];
+] };

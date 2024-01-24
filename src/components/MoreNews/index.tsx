@@ -10,7 +10,13 @@ function MoreNews() {
   };
 
   return (
-    <button onClick={ handleClick } id="more-btn">Mais notícias</button>
+    <button
+      onClick={ handleClick }
+      className="more-btn"
+      data-testid="more-news"
+    >
+      Mais notícias
+    </button>
   );
 }
 

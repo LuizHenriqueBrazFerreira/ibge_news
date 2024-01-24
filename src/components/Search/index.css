@@ -2,23 +2,21 @@
   display: inline-flex;
   left: 540px;
   position: relative;
-
 }
 
 .hide {
-  border: none;
   background-color: transparent;
-
+  border: none;
 }
 
 .search-btn {
-  width: 80px;
   border: none;
-  margin: 5px 0 5px 0;
-  text-decoration: none;
   color: black;
   font-size: 16px;
   font-weight: 500;
+  margin: 5px 0;
+  text-decoration: none;
+  width: 80px;
 }
 
 .search-btn:hover {
@@ -31,8 +29,9 @@
   text-align: center;
 }
 
-@media screen and (max-width: 768px) and (min-width: 460px) {
+@media screen and ( max-width : 768px ) and ( min-width : 460px ) {
+
   .search-container {
-    top: -50px
+    top: -50px;
   }
 }

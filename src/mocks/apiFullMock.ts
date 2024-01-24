@@ -1,16 +1,18 @@
-export const apiFullMock = [
+export const apiFullMock = { items: [
   {
-    id: 38927,
+    id: 38962,
     tipo: 'Notícia',
-    titulo: 'IBGE oferece 895 vagas no Concurso Público Nacional Unificado',
-    introducao: 'O IBGE participa do CPNU com 895 vagas destinadas a variados perfis ...',
-    data_publicacao: '16/01/2024 13:00:00',
+    titulo: 'Favelas e Comunidades Urbanas: IBGE muda  ...',
+    introducao: 'A designação “Aglomerados Subnormais” será substituída ...',
+    data_publicacao: '23/01/2024 10:00:00',
+    produto_id: 18354,
+    produtos: '18354|Regiões Metropolitanas, Aglomerações Urbanas e Regiões ...',
     editorias: 'ibge',
-    imagens: {
-      image_intro:
-      'images/agenciadenoticias/ibge/2024_01/CPNU_THUMB_Jos-Fernando-Ogura-SMCS.jpg',
-    },
-    link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38927-ibge-oferece-895-vagas-no-concurso-publico-nacional-unificado.html',
+    imagens:
+    '{"image_intro":"images\\/agenciadenoticias\\/ibge\\/2024_01\\/Favela_THUMB.jpg"}',
+    produtos_relacionados: '18354',
+    destaque: true,
+    link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38962-favelas-e-comunidades-urbanas-ibge-muda-denominacao-dos-aglomerados-subnormais.html',
   },
   {
     id: 38916,
@@ -171,4 +173,5 @@ export const apiFullMock = [
     editorias: 'ibge',
     link: 'http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38778-ultimos-dias-para-inscricoes-em-curso-a-distancia-do-ibge-para-gestores-publicos.html',
   },
-];
+],
+};

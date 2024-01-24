@@ -10,7 +10,9 @@ import './index.css';
 function NewsCard({ news }: { news: NewsType }) {
   const { favorite, changeFavorite } = useContext(MainContext);
 
-  const [favorites, setFavorites] = useState(false);
+  const favoriteState = favorite.some((data) => data.id === news.id);
+
+  const [favorites, setFavorites] = useState(favoriteState);
 
   const { introducao, titulo, link } = news;
   const { data_publicacao: dataPublicacao } = news;
@@ -23,19 +25,19 @@ function NewsCard({ news }: { news: NewsType }) {
   };
 
   return (
-    <div className="news-container">
-      <h3 className="title-card">{titulo}</h3>
+    <div className="news-container" data-testid="news-card">
+      <h4 className="title-card">{titulo}</h4>
       <h5 className="introduction-card">{introducao}</h5>
       {(daysCount === 0) && <h6>Publicado hoje</h6> }
       {(daysCount === 1) && <h6>{`${daysCount} dia atrás`}</h6>}
       {(daysCount > 1) && <h6>{`${daysCount} dias atrás`}</h6>}
-      <Link to={ link } id="full-news">Leia a notícia na íntegra</Link>
+      <Link to={ link } className="full-news">Leia a notícia na íntegra</Link>
       <button onClick={ handleclick }>
         <img
-          src={ favorite.some((data) => data.id === news.id)
-            ? fullHeart : emptyHeart }
+          src={ favoriteState ? fullHeart : emptyHeart }
           alt="Favorite"
           id="favorite-btn"
+          data-testid="favorite-button"
         />
       </button>
     </div>

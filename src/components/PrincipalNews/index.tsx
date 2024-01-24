@@ -16,6 +16,7 @@ function PrincipalNews() {
   const dataPublicacao = apiFull[0].data_publicacao;
 
   const daysCount = calculateDays(dataPublicacao);
+  console.log(imagens);
 
   const pathImage = convertImgPath(imagens);
 
@@ -25,22 +26,23 @@ function PrincipalNews() {
   };
 
   return (
-    <div id="principal-container">
+    <div className="principal-container">
       <img src={ `http://agenciadenoticias.ibge.gov.br/${pathImage}` } alt={ `${id}` } className="image-news" />
       <div className="news-info">
-        <h5 id="recent-news">Notícia mais recente</h5>
+        <h5 className="recent-news">Notícia mais recente</h5>
         <h3 className="title-principal">{titulo}</h3>
         <h5 className="introduction">{introducao}</h5>
         {(daysCount === 0) && <h6>Publicado hoje</h6> }
         {(daysCount === 1) && <h6>{`${daysCount} dia atrás`}</h6>}
         {(daysCount > 1) && <h6>{`${daysCount} dias atrás`}</h6>}
-        <Link to={ link } id="full-news">Leia a notícia na íntegra</Link>
+        <Link to={ link } className="full-news">Leia a notícia na íntegra</Link>
         <button onClick={ handleclick }>
           <img
             src={ favorite.some((data) => data.id === apiFull[0].id)
               ? fullHeart : emptyHeart }
             alt="Favorite"
-            id="favorite-btn"
+            className="favorite-btn"
+            data-testid="principal-favorite"
           />
         </button>
       </div>

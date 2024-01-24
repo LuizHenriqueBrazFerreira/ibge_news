@@ -32,6 +32,7 @@ function Search() {
       <button
         className="search-btn"
         onClick={ changeStatus }
+        data-testid="search-btn"
       >
         Pesquisar
       </button>
@@ -42,6 +43,7 @@ function Search() {
           value={ inputData }
           className={ `search-input ${status}` }
           onChange={ ({ target }) => handleChange(target) }
+          data-testid="search-input"
         />
       </form>
     </div>

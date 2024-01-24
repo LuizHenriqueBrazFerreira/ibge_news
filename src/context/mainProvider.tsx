@@ -6,8 +6,8 @@ function MainProvider({ children }: { children: React.ReactNode }) {
   const [apiFull, setApiFull] = useState<NewsType[]>([] as NewsType[]);
   const [limit, setLimit] = useState(11);
   const [form, setForm] = useState<SearchType>({} as SearchType);
-  const [api, setApi] = useState<NewsType[]>([]);
-  const [favorite, setFavorite] = useState<NewsType[]>([]);
+  const [api, setApi] = useState<NewsType[]>([{}] as NewsType[]);
+  const [favorite, setFavorite] = useState<NewsType[]>([] as NewsType[]);
 
   const getApiFull = (data:NewsType[]) => {
     setApiFull(data);

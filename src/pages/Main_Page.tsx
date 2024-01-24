@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import NewsCard from '../components/NewsCard';
 import MainContext from '../context/main';
@@ -11,19 +11,19 @@ import './index.css';
 
 function MainPage() {
   const { getApiFull, limit, changeLimit, api, changeApi } = useContext(MainContext);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getApi = async () => {
-      const data = await fetchIGBE();
-      getApiFull(data);
-      changeApi(data);
+    fetchIGBE().then((res) => {
+      getApiFull(res);
+      changeApi(res);
       changeLimit('reset');
-      console.log(limit);
-    };
-    getApi();
+      setLoading(false);
+    });
   }, []);
 
-  if (api.length === 0) return <h1>Loading</h1>;
+  if (loading === true) return <h1>Loading</h1>;
+
   return (
     <>
       <Header />

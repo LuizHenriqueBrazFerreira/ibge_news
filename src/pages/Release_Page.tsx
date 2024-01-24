@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { fetchIGBE } from '../services/Api';
 import MainContext from '../context/main';
 import Header from '../components/Header';
@@ -10,18 +10,19 @@ import './index.css';
 
 function ReleasePage() {
   const { getApiFull, limit, changeLimit, api, changeApi } = useContext(MainContext);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getApi = async () => {
+    fetchIGBE('release').then((res) => {
+      getApiFull(res);
+      changeApi(res);
       changeLimit('reset');
-      const data = await fetchIGBE('release');
-      getApiFull(data);
-      changeApi(data);
-    };
-    getApi();
+      setLoading(false);
+    });
   }, []);
 
-  if (api.length === 0) return <h1>Loading</h1>;
+  if (loading === true) return <h1>Loading</h1>;
+
   return (
     <>
       <Header />
