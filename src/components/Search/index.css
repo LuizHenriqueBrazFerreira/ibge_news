@@ -1,0 +1,37 @@
+.search-container {
+  display: inline-flex;
+  left: 540px;
+  position: relative;
+}
+
+.hide {
+  background-color: transparent;
+  border: none;
+}
+
+.search-btn {
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+  text-decoration: none;
+  width: 80px;
+}
+
+.search-btn:hover {
+  text-decoration: underline red;
+}
+
+.show {
+  border: 1px solid black;
+  margin-top: 5px;
+  text-align: center;
+}
+
+@media screen and ( max-width : 768px ) and ( min-width : 460px ) {
+
+  .search-container {
+    top: -50px;
+  }
+}

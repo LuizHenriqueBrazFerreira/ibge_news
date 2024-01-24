@@ -1,0 +1,26 @@
+.more-btn {
+  align-items: center;
+  border: 1px solid rgba(195, 24, 21, 1);
+  border-radius: 2px;
+  bottom: 0;
+  color: rgba(195, 24, 21, 1);
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 60px;
+  justify-content: center;
+  letter-spacing: 1.6px;
+  line-height: 15px;
+  margin: auto;
+  margin-top: 15px;
+  position: relative;
+  text-transform: uppercase;
+  width: 220px;
+}
+
+@media screen and ( max-width : 768px ) and ( min-width : 460px ) {
+
+  .more-btn {
+    left: 49%;
+  }
+}

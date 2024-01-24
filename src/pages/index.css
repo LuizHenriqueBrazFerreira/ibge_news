@@ -1,0 +1,14 @@
+* {
+  background: rgb(241, 242, 243);
+}
+
+section {
+  width: 1920px;
+}
+
+@media screen and ( max-width : 768px ) and ( min-width : 460px ) {
+
+  section {
+    width: 768px;
+  }
+}
